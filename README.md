@@ -22,6 +22,10 @@ counts-sorted.zip.
 
 degs.R will create two directories for outputs: output and images
 
+- counts-sorted
+
+### counts-sorted
+This directory contains the counted read data from HTSeq across the green ash libraries. This data is needed for input into the degs.R script. 
 
 ## hclust_dendro.R
 hclust_dendro.R is an Rscript used to use
@@ -38,8 +42,12 @@ in the rpkm directory
 
 hclust_dendro.R will create a single output Tiff "hclust_dendro.tiff"
 
+- rpkm
 
-## hm_bing.R
+### rpkm
+This directory contains the scripts for calculating RPKMs which are used as input for the hclust_dendro.R. A compressed version of the input file "all_final_cut55.tsv.gz" is also included.
+
+## hm_bingo.R
 hm_bingo.R (heatmap bingo) is an Rscript used to 
 read in BiNGO GO enrichment results and generate a heatmap used in
 "De novo assembly of the green ash transcriptome and 
@@ -56,3 +64,20 @@ and parsing out all lines that begin with "GO-ID". For example using grep:
 
 hm_bingo.R will create a three output Tiff files "Figure5_all.tiff,"
 "Figure5A_up.tiff," and "Figure5B_down.tiff"
+
+- bgo
+- Cold_down_old
+- Cold_up_old
+- goSlim_greenAsh.GAF
+
+### bgo
+This directory contains the GO Term enrichments from running Bingo. These serve as the inputs for hm_bingo.R.
+
+### Cold_down_old
+An old version of the Cold_down output from Bingo.
+
+### Cold_up_old
+An old version of the Cold_up output from Bingo.
+
+### goSlim_greenAsh.GAF
+This is another necessary input for running Bingo. 
